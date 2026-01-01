@@ -1,0 +1,357 @@
+﻿<UserControl x:Class="AptekaInternetApp.View.GeneralFile.UserControls.MainUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AptekaInternetApp.View.GeneralFile.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="960" d:DesignWidth="1680">
+
+    <UserControl.Resources>
+        <Style x:Key="ModernCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style x:Key="ModernButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#30a8ff"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="20,12"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style x:Key="SectionTitleStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#2D3748"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,40"/>
+        </Style>
+
+        <LinearGradientBrush x:Key="HeroGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#30a8ff" Offset="0"/>
+            <GradientStop Color="#1E88E5" Offset="0.7"/>
+            <GradientStop Color="#1565C0" Offset="1"/>
+        </LinearGradientBrush>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Background="White">
+
+            <!-- Hero Section -->
+            <Border Background="{StaticResource HeroGradient}" Padding="80,60">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="400"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="AptekaHub" 
+                                   FontSize="48" 
+                                   FontWeight="Bold" 
+                                   Foreground="White"
+                                   Margin="0,0,0,20"/>
+                        <TextBlock Text="Профессиональная система для работы с клиентами" 
+                                   FontSize="24" 
+                                   Foreground="#E3F2FD"
+                                   Margin="0,0,0,30"
+                                   TextWrapping="Wrap"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <Border Background="White" Padding="2" Margin="0,0,10,0">
+                                <TextBlock Text="⚡" FontSize="16" Margin="4,2"/>
+                            </Border>
+                            <TextBlock Text="Мгновенный поиск лекарств" 
+                                       FontSize="16" 
+                                       Foreground="White"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <Border Background="White" Padding="2" Margin="0,0,10,0">
+                                <TextBlock Text="🧾" FontSize="16" Margin="4,2"/>
+                            </Border>
+                            <TextBlock Text="Быстрое оформление чеков" 
+                                       FontSize="16" 
+                                       Foreground="White"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Background="White" Padding="2" Margin="0,0,10,0">
+                                <TextBlock Text="📱" FontSize="16" Margin="4,2"/>
+                            </Border>
+                            <TextBlock Text="Удобный интерфейс для ежедневной работы" 
+                                       FontSize="16" 
+                                       Foreground="White"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Border Grid.Column="1" 
+                            Background="White" 
+                            Padding="30"
+                            VerticalAlignment="Center">
+                        <StackPanel>
+                            <TextBlock Text="Быстрый старт" 
+                                       FontSize="20" 
+                                       FontWeight="Bold" 
+                                       Foreground="#2D3748"
+                                       Margin="0,0,0,20"/>
+                            <Button Style="{StaticResource ModernButtonStyle}" 
+                                    Content="Начать продажи"
+                                    Click="GoToCatalog_Click"
+                                    Margin="0,0,0,10"/>
+                            <Button Style="{StaticResource ModernButtonStyle}" 
+                                    Background="Transparent"
+                                    Foreground="#30a8ff"
+                                    BorderBrush="#30a8ff"
+                                    BorderThickness="1"
+                                    Content="Проверить остатки"
+                                    Click="CheckStock_Click"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- Promotional Banners Section -->
+            <Border Padding="60,40">
+                <StackPanel>
+                    <TextBlock Text="Акционные товары" Style="{StaticResource SectionTitleStyle}"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,40">
+
+                        <!-- Product 1 -->
+                        <Border Style="{StaticResource ModernCardStyle}" 
+                                Width="380" 
+                                Height="320" 
+                                Margin="0,0,20,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Border Background="#E8F5E8" 
+                                        Height="180">
+                                    <Image Source="/Resources/Images/ProductImage/PresiDentOpalas.png" 
+                                           Stretch="Uniform" 
+                                           HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"
+                                           Width="140" Height="140"/>
+                                </Border>
+
+                                <StackPanel Grid.Row="1" Margin="20,15">
+                                    <TextBlock Text="Президентская свежесть" 
+                                               FontSize="18" 
+                                               FontWeight="Bold" 
+                                               Foreground="#2D3748"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Ополаскиватель для профессиональной гигиены полости рта" 
+                                               FontSize="13" 
+                                               Foreground="#718096"
+                                               TextWrapping="Wrap"
+                                               Margin="0,0,0,15"/>
+                                    <Button Style="{StaticResource ModernButtonStyle}" 
+                                            Name="BannerProduct1" 
+                                            Click="BannerProduct1_Click"
+                                            Content="Подробнее →"
+                                            FontSize="13"
+                                            Padding="15,8"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <!-- Product 2 -->
+                        <Border Style="{StaticResource ModernCardStyle}" 
+                                Width="380" 
+                                Height="320">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Border Background="#FFF3E0" 
+                                        Height="180">
+                                    <Image Source="/Resources/Images/ProductImage/Kindervitamindeti.png" 
+                                           Stretch="Uniform" 
+                                           HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"
+                                           Width="140" Height="140"/>
+                                </Border>
+
+                                <StackPanel Grid.Row="1" Margin="20,15">
+                                    <TextBlock Text="Витамины для детей" 
+                                               FontSize="18" 
+                                               FontWeight="Bold" 
+                                               Foreground="#2D3748"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Специальная формула для поддержки иммунитета в осенний период" 
+                                               FontSize="13" 
+                                               Foreground="#718096"
+                                               TextWrapping="Wrap"
+                                               Margin="0,0,0,15"/>
+                                    <Button Style="{StaticResource ModernButtonStyle}" 
+                                            Name="BannerProduct2" 
+                                            Click="BannerProduct2_Click"
+                                            Content="Подробнее →"
+                                            FontSize="13"
+                                            Padding="15,8"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Features Section -->
+            <Border Background="#F7FAFC" Padding="60,40">
+                <StackPanel>
+                    <TextBlock Text="Возможности для кассира" Style="{StaticResource SectionTitleStyle}"/>
+
+                    <WrapPanel HorizontalAlignment="Center" Margin="0,0,0,20">
+
+                        <!-- Feature 1 -->
+                        <Border Style="{StaticResource ModernCardStyle}" 
+                                Width="280" 
+                                Height="180" 
+                                Margin="10">
+                            <StackPanel Margin="20" VerticalAlignment="Center">
+                                <Border Background="#30a8ff" 
+                                        Width="40" Height="40"
+                                        Margin="0,0,0,15">
+                                    <TextBlock Text="⚡" 
+                                               FontSize="16" 
+                                               HorizontalAlignment="Center" 
+                                               VerticalAlignment="Center"/>
+                                </Border>
+                                <TextBlock Text="Быстрая продажа" 
+                                           FontSize="16" 
+                                           FontWeight="SemiBold"
+                                           Margin="0,0,0,8"/>
+                                <TextBlock Text="Мгновенный поиск и добавление товаров в чек" 
+                                           FontSize="13" 
+                                           Foreground="#718096"
+                                           TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Feature 2 -->
+                        <Border Style="{StaticResource ModernCardStyle}" 
+                                Width="280" 
+                                Height="180" 
+                                Margin="10">
+                            <StackPanel Margin="20" VerticalAlignment="Center">
+                                <Border Background="#30a8ff" 
+                                        Width="40" Height="40"
+                                        Margin="0,0,0,15">
+                                    <TextBlock Text="💰" 
+                                               FontSize="16" 
+                                               HorizontalAlignment="Center" 
+                                               VerticalAlignment="Center"/>
+                                </Border>
+                                <TextBlock Text="Прием платежей" 
+                                           FontSize="16" 
+                                           FontWeight="SemiBold"
+                                           Margin="0,0,0,8"/>
+                                <TextBlock Text="Поддержка наличных и безналичных расчетов" 
+                                           FontSize="13" 
+                                           Foreground="#718096"
+                                           TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Feature 3 -->
+                        <Border Style="{StaticResource ModernCardStyle}" 
+                                Width="280" 
+                                Height="180" 
+                                Margin="10">
+                            <StackPanel Margin="20" VerticalAlignment="Center">
+                                <Border Background="#30a8ff" 
+                                        Width="40" Height="40"
+                                        Margin="0,0,0,15">
+                                    <TextBlock Text="📊" 
+                                               FontSize="16" 
+                                               HorizontalAlignment="Center" 
+                                               VerticalAlignment="Center"/>
+                                </Border>
+                                <TextBlock Text="Контроль скидок" 
+                                           FontSize="16" 
+                                           FontWeight="SemiBold"
+                                           Margin="0,0,0,8"/>
+                                <TextBlock Text="Автоматическое применение акций и скидочных карт" 
+                                           FontSize="13" 
+                                           Foreground="#718096"
+                                           TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Border>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Stats Section -->
+            <Border Padding="60,40">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                        <TextBlock Text="98%" 
+                                   FontSize="36" 
+                                   FontWeight="Bold" 
+                                   Foreground="#30a8ff"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="довольных клиентов" 
+                                   FontSize="14" 
+                                   Foreground="#718096"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                        <TextBlock Text="30 сек" 
+                                   FontSize="36" 
+                                   FontWeight="Bold" 
+                                   Foreground="#30a8ff"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="среднее время обслуживания" 
+                                   FontSize="14" 
+                                   Foreground="#718096"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                        <TextBlock Text="0 ошибок" 
+                                   FontSize="36" 
+                                   FontWeight="Bold" 
+                                   Foreground="#30a8ff"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="в работе с чеками" 
+                                   FontSize="14" 
+                                   Foreground="#718096"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="3" HorizontalAlignment="Center">
+                        <TextBlock Text="24/7" 
+                                   FontSize="36" 
+                                   FontWeight="Bold" 
+                                   Foreground="#30a8ff"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="техническая поддержка" 
+                                   FontSize="14" 
+                                   Foreground="#718096"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+
+</UserControl>

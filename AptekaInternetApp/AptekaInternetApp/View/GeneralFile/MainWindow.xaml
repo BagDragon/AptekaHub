@@ -1,0 +1,533 @@
+﻿<Window x:Class="AptekaInternetApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AptekaInternetApp"
+        mc:Ignorable="d"
+        Title="AptekaHub. Главное окно" Height="960" Width="1680" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" 
+        Icon="/Resources/Images/Icons/iconProgram.ico">
+
+    <Window.Resources>
+        <Style x:Key="CompactTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="#666"/>
+        </Style>
+
+        <local:BackButtonVisibilityConverter x:Key="BackButtonVisibilityConverter"/>
+        
+        <!-- Стиль для кнопок меню пользователя -->
+        <Style x:Key="UserMenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="16,12"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="8" 
+                                BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Left" 
+                                              VerticalAlignment="Center"
+                                              Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#F8F9FA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E9ECEF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Новые стили для современного дизайна -->
+        <Style x:Key="ModernCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="BorderThickness" Value="0.1"/>
+            <Setter Property="BorderBrush" Value="#E5E5E5"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="10" Opacity="0.8" Color="Gray"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        
+
+        <!-- Стиль для текстового поля поиска -->
+        <Style x:Key="ModernSearchTextBoxStyle" TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Setter Property="Foreground" Value="#999"/>
+            <Setter Property="CaretBrush" Value="#FFFF7022"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="border" 
+                        Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="8">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                  Focusable="false"
+                                  HorizontalScrollBarVisibility="Hidden" 
+                                  VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter TargetName="border" Property="Opacity" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF7EB4EA"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="true">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF569DE5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Градиент для аватара -->
+        <LinearGradientBrush x:Key="AvatarGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FFFF7022" Offset="0"/>
+            <GradientStop Color="#FFFFAF00" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!-- Градиент для логотипа -->
+        <LinearGradientBrush x:Key="LogoGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#30a8ff" Offset="0"/>
+            <GradientStop Color="#1E88E5" Offset="0.7"/>
+            <GradientStop Color="#1565C0" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!-- Градиент для иконки корзины -->
+        <LinearGradientBrush x:Key="CartGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FFFF7022" Offset="0"/>
+            <GradientStop Color="#FFFFAF00" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="320"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="40" ></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Начало шапки-->
+
+        <!-- Верхняя панель с адресом и пользователем -->
+        <Border Grid.ColumnSpan="3" Background="#F8F9FA" BorderBrush="#E5E5E5" BorderThickness="0 0 0 1">
+            <Grid Margin="20 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Адрес и кнопка назад -->
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+
+                    <Button x:Name="BackButton" 
+                    Click="BackButton_Click"
+                    Style="{StaticResource IconButtonStyle}"
+                     Visibility="{Binding Converter={StaticResource BackButtonVisibilityConverter}}"
+                    Width="40"
+                    Height="40"
+                    Margin="0 0 15 0"
+                    ToolTip="Назад">
+                        <Path Data="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" 
+                      Fill="#666" 
+                      Stretch="Uniform"/>
+                    </Button>
+
+                    <Path Data="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" 
+                          Fill="#666" Stretch="Uniform" Width="16" Height="16" Margin="0 0 8 0"/>
+                    <StackPanel>
+                        <TextBlock FontSize="14" FontWeight="SemiBold" Foreground="#333">Ульяновск</TextBlock>
+                        <TextBlock FontSize="12" Foreground="#666" Margin="0 2 0 0">ул. Ленина, дом 21</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Пользователь и корзина -->
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <!-- Корзина -->
+                    <Button  Grid.Column="2" Style="{StaticResource IconButtonStyle}" Name="ShoppingCartButton" Click="ShoppingCartButton_Click" Grid.Row="1" Width="30" Height="30" Margin="0 0 5 0">
+                        <Image Source="\Resources\Images\Main\shopping-cart.png" ></Image>
+                    </Button>
+
+                    <!-- Профиль пользователя -->
+                    <Border Padding="12 8" 
+                            Cursor="Hand"
+                            Name="ActionUsers" 
+                            MouseDown="ActionUsers_MouseDown"
+                            Background="Transparent"
+                            CornerRadius="8">
+                        <StackPanel Orientation="Horizontal">
+                            <!-- Аватар с градиентом -->
+                            <Border 
+                                    CornerRadius="20" Width="32" Height="32" Margin="0,0,10,0">
+                                <Image Source="/Resources/Images/Main/avatar.png" Stretch="Uniform" Opacity="0.8"/>
+                            </Border>
+
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock x:Name="NameUser" 
+                                           FontSize="14" 
+                                           FontWeight="SemiBold" 
+                                           Foreground="#333"/>
+                                <TextBlock x:Name="RoleUser" 
+                                           FontSize="11" 
+                                           Foreground="#666" 
+                                           Margin="0 2 0 0"/>
+                            </StackPanel>
+
+                            <Path Data="M7 10l5 5 5-5z" 
+                                  Fill="#666" 
+                                  Stretch="Uniform" 
+                                  Width="12" 
+                                  Height="12" 
+                                  Margin="12,0,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Основная шапка с лого и поиском -->
+        <Border Grid.Row="1" Grid.ColumnSpan="3" Background="White" Padding="20 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Логотип (векторный) -->
+                <StackPanel Grid.Column="0" 
+                            Orientation="Horizontal" 
+                            VerticalAlignment="Center" 
+                            MouseDown="OpenMainUserControl_MouseDown" 
+                            Name="OpenMainUserControl" 
+                            Cursor="Hand">
+                    <!-- Векторный логотип аптеки -->
+                    <Border Width="50" 
+                            Height="50" 
+                            Background="{StaticResource LogoGradient}"
+                            CornerRadius="12"
+                            Margin="0 0 12 0">
+                        <Viewbox Stretch="Uniform" Margin="8">
+                            <Grid>
+                                <!-- Крест медицины -->
+                                <Path Data="M12 2L9 5 12 8 15 5z M8 7L5 10 8 13 11 10z M16 7L13 10 16 13 19 10z M12 14L9 17 12 20 15 17z" 
+                                      Fill="White" 
+                                      Stretch="Uniform"/>
+                                <!-- Капля -->
+                                <Path Data="M12 2C12 2 16 6 16 10C16 13.31 13.31 16 10 16C6.69 16 4 13.31 4 10C4 6 8 2 12 2Z" 
+                                      Fill="White" 
+                                      Stretch="Uniform"
+                                      Opacity="0.8"/>
+                            </Grid>
+                        </Viewbox>
+                    </Border>
+
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock FontSize="28" FontWeight="Bold">
+                            <Run Foreground="#30a8ff">Apteka</Run>
+                            <Run Foreground="#333">Hub</Run>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Поисковая строка -->
+                <Border Grid.Column="1" 
+                        Background="White" 
+                        CornerRadius="12"
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Margin="0 0 240 0"
+                        Width="700" 
+                        Height="52"
+                        BorderThickness="1"
+                        BorderBrush="#E5E5E5">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="10" Opacity="0.8" Color="Gray"/>
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Текстовое поле поиска -->
+                        <TextBox x:Name="SearchTextBox" 
+                                 Grid.Column="0"
+                                 BorderThickness="0"
+                                 Background="Transparent"
+                                 FontSize="16"
+                                 VerticalContentAlignment="Center"
+                                 Padding="15,0"
+                                 Foreground="#333"
+                                 Text="Поиск лекарств и товаров..."
+                                 GotFocus="SearchTextBox_GotFocus"
+                                 LostFocus="SearchTextBox_LostFocus">
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Setter Property="CaretBrush" Value="#30a8ff"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsFocused" Value="True">
+                                            <Setter Property="Foreground" Value="#333"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+
+                        <!-- Кнопка поиска -->
+                        <Button Grid.Column="1" 
+                                Style="{StaticResource IconButtonStyle}"
+                                x:Name="SearchButton" 
+                                Click="SearchButton_Click" 
+                                Width="40" 
+                                Height="40" 
+                                VerticalAlignment="Center"
+                                Margin="0,0,10,0">
+                            <Path Data="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" 
+                                  Fill="#666" 
+                                  Stretch="Uniform"/>
+                        </Button>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!--Конец шапки-->
+        
+        <!--Категории-->
+        <Border VerticalAlignment="Top" 
+                Grid.Column="0" 
+                Grid.Row="2" 
+                Grid.ColumnSpan="3" 
+                BorderBrush="Gray" 
+                BorderThickness="0 0 0 0.5" 
+                Padding="0 0 0 5">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border Background="#30a8ff" 
+                        CornerRadius="20" 
+                        Width="100" 
+                        Padding="5" 
+                        VerticalAlignment="Center">
+                    <Button FontSize="20" 
+                            Style="{StaticResource TextButtonStyle}" 
+                            VerticalAlignment="Top" 
+                            Background="Transparent" 
+                            BorderBrush="Transparent" 
+                            Foreground="White" 
+                            Name="MenuCatalogButton" 
+                            Click="MenuCatalogButton_Click"
+                            >Каталог</Button>
+                </Border>
+                <ContentControl x:Name="ViewCategoriesContentControl" 
+                                Height="40" 
+                                HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+        <!--Подкатегории-->
+        <ContentControl x:Name="ViewSubcategoriesContentControl" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top" 
+                        Grid.Column="1" 
+                        Grid.Row="3"/>
+
+        <!-- Действия пользователей (обновленная панель) -->
+        <Border Panel.ZIndex="100" 
+                Name="ActionUserPanel" 
+                MouseDown="ActionMenuUsers_MouseDown" 
+                MouseLeave="ActionUserPanel_MouseLeave"
+                Visibility="Collapsed" 
+                Background="White" 
+                CornerRadius="12" 
+                BorderThickness="1"
+                Grid.RowSpan="5" 
+                Width="280" 
+                Padding="8"  
+                Grid.Column="2" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Right" 
+                Margin="0 70 20 0">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" BlurRadius="20" Opacity="0.15" Color="Black"/>
+            </Border.Effect>
+            <Border.BorderBrush>
+                <SolidColorBrush Color="#E5E5E5"/>
+            </Border.BorderBrush>
+
+            <StackPanel>
+                <!-- Заголовок панели -->
+                <Border Background="#F8F9FA" 
+                        CornerRadius="8" 
+                        Padding="16,12" 
+                        Margin="0,0,0,8">
+                    <StackPanel>
+                        <TextBlock x:Name="PanelUserName" 
+                                   FontSize="16" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="#333"/>
+                        <TextBlock x:Name="PanelUserRole" 
+                                   FontSize="12" 
+                                   Foreground="#666" 
+                                   Margin="0,2,0,0"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Разделитель -->
+                <Rectangle Height="1" Fill="#F0F0F0" Margin="8,4"/>
+
+                <!-- Кнопки меню -->
+                <Button Style="{StaticResource UserMenuButtonStyle}" 
+                        Name="CartButton" 
+                        Click="ShoppingCartButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Path Data="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" 
+                              Fill="#666" 
+                              Stretch="Uniform" 
+                              Width="16" 
+                              Height="16" 
+                              Margin="0,0,12,0"/>
+                        <TextBlock Text="Корзина" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource UserMenuButtonStyle}" 
+                        Name="MenuHistoryButton" 
+                        Click="MenuHistoryButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Path Data="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" 
+                              Fill="#666" 
+                              Stretch="Uniform" 
+                              Width="16" 
+                              Height="16" 
+                              Margin="0,0,12,0"/>
+                        <TextBlock Text="История продаж" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Разделитель для админских функций -->
+                <Rectangle Height="1" Fill="#F0F0F0" Margin="8,4" Name="AdminSeparator" Visibility="Collapsed"/>
+
+                <!-- Админские кнопки -->
+                <Button Style="{StaticResource UserMenuButtonStyle}" 
+                        Name="MenuAddProductButton"  
+                        Click="MenuAddProductButton_Click"
+                        >
+                    <StackPanel Orientation="Horizontal">
+                        <Path Data="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" 
+                              Fill="#666" 
+                              Stretch="Uniform" 
+                              Width="16" 
+                              Height="16" 
+                              Margin="0,0,12,0"/>
+                        <TextBlock Text="Добавить товар" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource UserMenuButtonStyle}" 
+                        Name="MenuAddCategoriesButton" 
+                        Click="MenuAddCategoriesButton_Click"
+                        >
+                    <StackPanel Orientation="Horizontal">
+                        <Path Data="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" 
+                              Fill="#666" 
+                              Stretch="Uniform" 
+                              Width="16" 
+                              Height="16" 
+                              Margin="0,0,12,0"/>
+                        <TextBlock Text="Добавить категорию" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource UserMenuButtonStyle}" 
+                        Name="MenuAddSubcategoriesButton" 
+                        Click="MenuAddSubcategoriesButton_Click"
+                        >
+                    <StackPanel Orientation="Horizontal">
+                        <Path Data="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" 
+                              Fill="#666" 
+                              Stretch="Uniform" 
+                              Width="16" 
+                              Height="16" 
+                              Margin="0,0,12,0"/>
+                        <TextBlock Text="Добавить подкатегорию" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Разделитель перед выходом -->
+                <Rectangle Height="1" Fill="#F0F0F0" Margin="8,4"/>
+
+                <!-- Кнопка выхода -->
+                <Button Style="{StaticResource UserMenuButtonStyle}" 
+                        Name="ExitButton" 
+                        Click="ExitButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Path Data="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" 
+                              Fill="#DC3545" 
+                              Stretch="Uniform" 
+                              Width="16" 
+                              Height="16" 
+                              Margin="0,0,12,0"/>
+                        <TextBlock Foreground="#DC3545" Text="Выйти" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+        
+        <!--Панель меню катагорий и подкатегорий-->
+        <Border x:Name="CatalogPanelBorder"
+        Grid.Row="3"
+        Grid.RowSpan="2"
+        Grid.Column="1"
+        VerticalAlignment="Top"
+        Width="600"
+         Height="300"
+        Visibility="Collapsed"
+        Background="White"
+        BorderBrush="#E5E5E5"
+        BorderThickness="0 1 1 1"
+        HorizontalAlignment="Left"
+                MouseLeave="MenuCatalogButton_MouseLeave"
+                Margin="100  0 0 0"
+        Panel.ZIndex="999">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" BlurRadius="20" Opacity="0.15" Color="Black"/>
+            </Border.Effect>
+
+            <ContentControl x:Name="CatalogPanelContent"/>
+        </Border>
+
+
+        <ContentControl x:Name="ViewContentControl"  Grid.Row="4" Grid.ColumnSpan="4"></ContentControl>
+    </Grid>
+</Window>

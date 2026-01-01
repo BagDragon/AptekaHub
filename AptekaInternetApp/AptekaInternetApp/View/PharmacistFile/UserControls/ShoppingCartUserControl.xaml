@@ -1,0 +1,209 @@
+﻿<UserControl x:Class="AptekaInternetApp.View.PharmacistFile.UserControls.ShoppingCartUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AptekaInternetApp.View.PharmacistFile.UserControls"
+             mc:Ignorable="d" Margin="0 20 0 0">
+    <UserControl.Resources>
+        <Style x:Key="ProductCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Padding" Value="16"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+        </Style>
+
+        <Style x:Key="OrderSummaryStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Padding" Value="20"/>
+        </Style>
+
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#30a8ff"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanPrescriptionConverter"/>
+        <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#30a8ff"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#30a8ff"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+      
+       
+    </UserControl.Resources>
+
+    <Grid Background="#FFEFF1F3">
+
+        <!-- ИСПРАВЛЕНИЕ 2: Используем Grid вместо StackPanel для правильного растягивания -->
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Левая часть - товары -->
+            <Border Grid.Column="0" Background="White" CornerRadius="10" Margin="0,0,20,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Заголовок -->
+                    <Border Grid.Row="0" Background="White" Padding="20" BorderBrush="#EEE" BorderThickness="0,0,0,1">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="Моя корзина" FontSize="28" FontWeight="Medium"/>
+                            <TextBlock x:Name="ItemsCountTextBlock" Text="Состав: товаров" FontSize="16" 
+                                       Foreground="Gray" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                  
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                        <ListView x:Name="ListViewProducts" BorderThickness="0" Background="Transparent">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Height" Value="160"/>
+                                    <Setter Property="Padding" Value="0"/>
+                                    <Setter Property="Margin" Value="0"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <!-- ИСПРАВЛЕНИЕ: Увеличиваем отступы и размеры, растягиваем по ширине -->
+                                    <Border Padding="25" BorderBrush="#EEE" BorderThickness="0,0,0,1" Height="160">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="140"/>
+                                                <!-- Картинка -->
+                                                <ColumnDefinition Width="*"/>
+                                                <!-- Название -->
+                                                <ColumnDefinition Width="Auto"/>
+                                                <!-- Количество +/- -->
+                                                <ColumnDefinition Width="180"/>
+                                                <!-- Цена -->
+                                            </Grid.ColumnDefinitions>
+
+                                            <!-- Картинка - увеличенная -->
+                                            <Border Grid.Column="0" Background="#F5F5F5" CornerRadius="10" 
+                                                    Width="120" Height="120" VerticalAlignment="Center">
+                                                <Image Source="{Binding Path=ImageCatalogProduct}" 
+                                                       Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       Width="110" Height="110"/>
+                                            </Border>
+
+                                            <!-- Название - увеличенный шрифт, растягивается -->
+                                            <StackPanel  Grid.Column="1">
+                                                <TextBlock FontSize="22" Text="{Binding NameProduct}" 
+                                                       VerticalAlignment="Center" TextWrapping="Wrap" 
+                                                       Margin="25,0,25,0" FontWeight="Medium"
+                                                       TextAlignment="Left" HorizontalAlignment="Stretch"/>
+                                                <Border Background="#FF6B8E23" Width="100" HorizontalAlignment="Left" CornerRadius="10" Padding="6,2" 
+Margin="20,10,0,0"
+Visibility="{Binding RequiresPrescription, Converter={StaticResource BooleanPrescriptionConverter}}">
+                                                    <TextBlock Text="Рецепт" HorizontalAlignment="Center" FontSize="11" FontWeight="Bold" 
+       Foreground="White" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </StackPanel>
+                                            
+
+                                            <!-- Количество +/- - увеличенные кнопки -->
+                                            <StackPanel Grid.Column="2" Orientation="Horizontal" 
+                                                       VerticalAlignment="Center" Margin="0,0,50,0"
+                                                       HorizontalAlignment="Center">
+                                                <Border Width="55" Height="55" BorderBrush="#DDD" BorderThickness="2"
+                                                        CornerRadius="6">
+                                                    <Button  FontSize="26" FontWeight="Bold" Name="MinusButton" Click="MinusButton_Click" Background="Transparent" BorderBrush="Transparent" >-</Button>
+                                                </Border>
+                                                
+                                                <TextBlock Margin="20,0,20,0" VerticalAlignment="Center" 
+                                                           FontSize="28" Text="{Binding Quantity, Mode=TwoWay}"
+                                                           MinWidth="40" TextAlignment="Center" FontWeight="SemiBold"/>
+                                                <Border Width="55" Height="55" BorderBrush="#DDD" BorderThickness="2" CornerRadius="6">
+                                                    <Button FontSize="26" FontWeight="Bold" Name="PlusButton" Click="PlusButton_Click" 
+                                                            Background="Transparent" 
+                                                            BorderBrush="Transparent">+</Button>
+                                                </Border>
+                                            </StackPanel>
+
+                                            <StackPanel Grid.Column="3" Margin="0,0,10,0">
+                                                <TextBlock FontSize="16" FontWeight="SemiBold" 
+Text="{Binding Price, StringFormat=\{0:0\} ₽}"
+Foreground="#6C757D" HorizontalAlignment="Center" 
+Margin="0,0,0,4"
+Visibility="{Binding HasDiscount, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                    <TextBlock.TextDecorations>
+                                                        <TextDecoration Location="Strikethrough"/>
+                                                    </TextBlock.TextDecorations>
+                                                </TextBlock>
+
+                                                <!-- Цена со скидкой -->
+                                                <TextBlock FontSize="24" FontWeight="Bold" 
+Text="{Binding PriceWithDiscount, StringFormat=\{0:0\} ₽}"
+Foreground="#30a8ff" HorizontalAlignment="Center" 
+Margin="0,0,0,4"/>
+                                            </StackPanel>
+                                            
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+
+            <!-- Правая часть - итоги -->
+            <!-- ИСПРАВЛЕНИЕ 4: Убрал фиксированную высоту, VerticalAlignment="Top" -->
+            <Border Grid.Column="1" Background="White" CornerRadius="8" Padding="20" VerticalAlignment="Top">
+                <StackPanel>
+                    <TextBlock Text="Ваш заказ" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                        <TextBlock Text="Сумма заказа" FontSize="16" Foreground="Gray"/>
+                        <TextBlock x:Name="SubtotalTextBlock" FontSize="16" FontWeight="Medium" 
+                                   HorizontalAlignment="Right" Margin="8,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                        <TextBlock Text="Скидка" FontSize="16" Foreground="Gray"/>
+                        <TextBlock x:Name="DiscountTextBlock" Text="1 510 ₽" FontSize="16" FontWeight="Medium" 
+                                   HorizontalAlignment="Right" Margin="8,0,0,0" Foreground="#30a8ff"/>
+                    </StackPanel>
+
+                    <Rectangle Height="1" Fill="#EEE" Margin="0,8,0,16"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock Text="Итого к оплате" FontSize="20" FontWeight="Bold"/>
+                        <TextBlock x:Name="TotalTextBlock" Text="11 849 ₽" FontSize="20" FontWeight="Bold" 
+                                   HorizontalAlignment="Right" Margin="8,0,0,0"/>
+                    </StackPanel>
+
+                    <Button Style="{StaticResource PrimaryButtonStyle}" Name="PayButton" Click="PayButton_Click">
+                        Продать
+                    </Button>
+
+                    <Button Style="{StaticResource SecondaryButtonStyle}" Margin="0,12,0,0" Click="ContinueShopping_Click">
+                        Продолжить покупки
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+
+</UserControl>

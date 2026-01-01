@@ -1,0 +1,267 @@
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.ResolveComReference.cache
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\ChangePasswordUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\CodeEnterUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\RequestEmailUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UpdatePasswordWindow.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\ChangePasswordUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\CodeEnterUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\RequestEmailUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogPanelUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\MainUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\MainWindow.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\RegistrationWindow.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\AuthorizationWindow.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\ManagerWindow.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogCategoriesUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogSubcategoriesUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\CategoriesMasterUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\HistoryUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\ProductMasterUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\SubcategoriesMasterUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\ViewProductUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\SalesReportControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\WarehouseReportControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\PrescriptionInputWindow.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\ReceiptDisplayWindow.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\UserControls\ShoppingCartUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\App.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp_MarkupCompile.cache
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp_MarkupCompile.lref
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.exe.config
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.exe
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.pdb
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\itextsharp.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Buffers.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Memory.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BCrypt.Net-Core.pdb
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\itextsharp.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Buffers.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Memory.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogUserControl.g.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\App.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UpdatePasswordWindow.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogPanelUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\MainUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\MainWindow.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\RegistrationWindow.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\AuthorizationWindow.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\ManagerWindow.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogCategoriesUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogSubcategoriesUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\CategoriesMasterUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\HistoryUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\ProductMasterUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\SubcategoriesMasterUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\ViewProductUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\SalesReportControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\WarehouseReportControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\PrescriptionInputWindow.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\ReceiptDisplayWindow.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\UserControls\ShoppingCartUserControl.baml
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.g.resources
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.InitialNewDatabase.resources
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Properties.Resources.resources
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.GenerateResource.cache
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaIn.FF60759D.Up2Date
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.exe
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.pdb
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.exe.config
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.SaleUpdate.resources
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.StockProductUpdate.resources
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.exe.config
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.exe
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.pdb
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\itextsharp.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Buffers.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Memory.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BCrypt.Net-Core.pdb
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\itextsharp.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Buffers.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Memory.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.exe.config
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.ResolveComReference.cache
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\ChangePasswordUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\CodeEnterUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\RequestEmailUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UpdatePasswordWindow.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\ChangePasswordUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\CodeEnterUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\RequestEmailUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogPanelUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\MainUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\MainWindow.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\RegistrationWindow.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\AuthorizationWindow.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\ManagerWindow.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogCategoriesUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogSubcategoriesUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\CategoriesMasterUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\HistoryUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\ProductMasterUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\SubcategoriesMasterUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\ViewProductUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\SalesReportControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\WarehouseReportControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\PrescriptionInputWindow.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\ReceiptDisplayWindow.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\UserControls\ShoppingCartUserControl.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\App.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp_MarkupCompile.cache
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp_MarkupCompile.lref
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\App.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UpdatePasswordWindow.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogPanelUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\MainUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\MainWindow.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\RegistrationWindow.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\AuthorizationWindow.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\ManagerWindow.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogCategoriesUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogSubcategoriesUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\CategoriesMasterUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\HistoryUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\ProductMasterUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\SubcategoriesMasterUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\ViewProductUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\SalesReportControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\WarehouseReportControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\PrescriptionInputWindow.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\ReceiptDisplayWindow.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\UserControls\ShoppingCartUserControl.baml
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.g.resources
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.InitialNewDatabase.resources
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.SaleUpdate.resources
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.StockProductUpdate.resources
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Properties.Resources.resources
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.GenerateResource.cache
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaIn.FF60759D.Up2Date
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.exe
+C:\Users\pc\Desktop\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.pdb
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.exe.config
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.exe
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\AptekaInternetApp.pdb
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\itextsharp.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Buffers.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Memory.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BCrypt.Net-Core.pdb
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\itextsharp.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Buffers.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Memory.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.exe.config
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.ResolveComReference.cache
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\ChangePasswordUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\CodeEnterUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\RequestEmailUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UpdatePasswordWindow.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\ChangePasswordUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\CodeEnterUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UserControls\RequestEmailUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogPanelUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\MainUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\MainWindow.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\RegistrationWindow.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\AuthorizationWindow.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\ManagerWindow.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogCategoriesUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogSubcategoriesUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\CategoriesMasterUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\HistoryUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\ProductMasterUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\SubcategoriesMasterUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\ViewProductUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\SalesReportControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\WarehouseReportControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\PrescriptionInputWindow.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\ReceiptDisplayWindow.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\UserControls\ShoppingCartUserControl.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\App.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp_MarkupCompile.cache
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp_MarkupCompile.lref
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\App.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\UpdatePasswordWindow.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogPanelUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\MainUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\MainWindow.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\RegistrationWindow.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AuthenticationFile\AuthorizationWindow.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\ManagerWindow.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogCategoriesUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogSubcategoriesUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\CatalogUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\CategoriesMasterUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\HistoryUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\ProductMasterUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\AdminFile\UserControls\SubcategoriesMasterUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\GeneralFile\UserControls\ViewProductUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\SalesReportControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\ManagerFile\UserControls\WarehouseReportControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\PrescriptionInputWindow.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\ReceiptDisplayWindow.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\View\PharmacistFile\UserControls\ShoppingCartUserControl.baml
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.g.resources
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.InitialNewDatabase.resources
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.SaleUpdate.resources
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Migrations.StockProductUpdate.resources
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.Properties.Resources.resources
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.GenerateResource.cache
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaIn.FF60759D.Up2Date
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.exe
+C:\Users\pc\Desktop\На всякий ДП\Ермильев Диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\AptekaInternetApp.pdb

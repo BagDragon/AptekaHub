@@ -1,0 +1,20 @@
+﻿AptekaInternetApp
+
+
+winexe
+C#
+.cs
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\obj\Debug\
+AptekaInternetApp
+none
+false
+DEBUG;TRACE
+C:\Users\pc\Desktop\Мой диплом\AptekaInternetApp\AptekaInternetApp\App.xaml
+23512493077
+
+64-1492836106
+135-2103102887
+View\AuthenticationFile\UpdatePasswordWindow.xaml;View\AuthenticationFile\UserControls\ChangePasswordUserControl.xaml;View\AuthenticationFile\UserControls\CodeEnterUserControl.xaml;View\AuthenticationFile\UserControls\RequestEmailUserControl.xaml;View\GeneralFile\UserControls\CatalogPanelUserControl.xaml;View\GeneralFile\UserControls\MainUserControl.xaml;View\GeneralFile\MainWindow.xaml;View\AuthenticationFile\RegistrationWindow.xaml;View\AuthenticationFile\AuthorizationWindow.xaml;View\ManagerFile\ManagerWindow.xaml;View\GeneralFile\UserControls\CatalogCategoriesUserControl.xaml;View\GeneralFile\UserControls\CatalogSubcategoriesUserControl.xaml;View\GeneralFile\UserControls\CatalogUserControl.xaml;View\AdminFile\UserControls\CategoriesMasterUserControl.xaml;View\GeneralFile\UserControls\HistoryUserControl.xaml;View\AdminFile\UserControls\ProductMasterUserControl.xaml;View\AdminFile\UserControls\SubcategoriesMasterUserControl.xaml;View\GeneralFile\UserControls\ViewProductUserControl.xaml;View\ManagerFile\UserControls\SalesReportControl.xaml;View\ManagerFile\UserControls\WarehouseReportControl.xaml;View\PharmacistFile\PrescriptionInputWindow.xaml;View\PharmacistFile\ReceiptDisplayWindow.xaml;View\PharmacistFile\UserControls\ShoppingCartUserControl.xaml;
+
+True
+

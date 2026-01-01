@@ -1,0 +1,206 @@
+﻿<UserControl x:Class="AptekaInternetApp.View.MainWindowFile.UsersControls.ViewProductUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AptekaInternetApp.View.MainWindowFile.UsersControls"
+             mc:Ignorable="d" 
+            d:DesignHeight="750" d:DesignWidth="900">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="CharacterText">
+            <Setter Property="Margin" Value="0 0 50 0"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+
+        <!-- Стиль для улучшенной кнопки назад -->
+        <Style x:Key="BackButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Конвертеры для видимости -->
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanPrescriptionConverter"/>
+        <local:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Основной контент -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="20">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock FontWeight="DemiBold" FontSize="40" Text="{Binding Path=Name}"  
+                          HorizontalAlignment="Left" Margin="0,0,0,30"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,40">
+                    <Border Height="450" Width="450" Padding="3,0,3,0" 
+                            BorderThickness="1.6" BorderBrush="Gray">
+                        <Image Stretch="Fill" Source="{Binding Path=Photo}"/>
+                    </Border>
+
+                    <StackPanel VerticalAlignment="Center" Margin="50,0,0,0">
+
+                        <!-- Старая цена (перечёркнутая) если есть скидка -->
+                        <TextBlock FontSize="30" Margin="0,0,0,10" 
+                                  Text="{Binding Price, StringFormat=\{0:0\} ₽}"
+                                  Foreground="#6C757D"
+                                  Visibility="{Binding HasDiscount, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <TextBlock.TextDecorations>
+                                <TextDecoration Location="Strikethrough"/>
+                            </TextBlock.TextDecorations>
+                        </TextBlock>
+
+                        <!-- Цена со скидкой -->
+                        <TextBlock FontSize="50" Margin="0,0,0,20" 
+                                  Text="{Binding PriceWithDiscount, StringFormat=\{0:0\} ₽}" 
+                                  TextAlignment="Left" 
+                                  Foreground="#30a8ff"/>
+
+                        <!-- Процент скидки -->
+                        <Border Background="#FF6B8E23" CornerRadius="4" Padding="8,4" 
+                                HorizontalAlignment="Left" Margin="0,0,0,20"
+                                Visibility="{Binding HasDiscount, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <TextBlock Text="{Binding DiscountPercent, StringFormat=-{0:0}%}" 
+                                       FontSize="16" FontWeight="Bold" 
+                                       Foreground="White"/>
+                        </Border>
+
+                        <!-- Кнопка добавления в корзину - показывается когда товара НЕТ в корзине -->
+                        <Border Background="#30a8ff" Height="60" Width="400" 
+                                Margin="0,0,0,30" Name="AddCartBorder"
+                                Visibility="{Binding IsInCart, Converter={StaticResource InverseBooleanToVisibilityConverter}}">
+                            <Button Foreground="White" Background="Transparent" 
+                                    BorderBrush="Transparent"  
+                                    Name="AddInCartButton" 
+                                    FontSize="20" 
+                                    FontWeight="SemiBold"
+                                    Click="AddInCartButton_Click">
+                                Добавить в корзину
+                            </Button>
+                        </Border>
+
+                        <!-- Контрол количества - показывается когда товар в корзине -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+                                    Margin="0,0,0,30"
+                                    Visibility="{Binding IsInCart, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <TextBlock Text="Количество в корзине:" 
+                                       FontSize="18" 
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,20,0"/>
+
+                            <Border Background="LightGray" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                <Button Content="-" Width="40" Height="40" FontSize="18" FontWeight="Bold"
+                                    Background="Transparent" BorderBrush="Transparent"
+                                    Click="QuantityMinus_Click"/>
+                            </Border>
+
+                            <TextBlock Text="{Binding CartQuantity}" 
+                                       Width="50"  TextAlignment="Center" VerticalAlignment="Center"
+                                       FontSize="18" FontWeight="SemiBold" Background="White" Margin="10,0"/>
+                            <Border Background="LightGray" BorderThickness="1" BorderBrush="Gray" CornerRadius="5">
+                                <Button Content="+" Width="40" Height="40" FontSize="18" FontWeight="Bold"
+                                     Background="Transparent" BorderBrush="Transparent"
+                                    Click="QuantityPlus_Click"/>
+                            </Border>
+                        </StackPanel>
+
+                        <TextBlock Margin="0,0,0,20"   
+                                  Text="Характеристики" 
+                                  FontWeight="Medium" 
+                                  FontSize="25" 
+                                  HorizontalAlignment="Left"/>
+
+                        <!-- Характеристики товара -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Text="Производитель:" 
+                                      Style="{StaticResource CharacterText}" />
+                            <TextBlock FontWeight="DemiBold" Text="{Binding Manufacture}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Text="Форма выпуска:"  
+                                      Style="{StaticResource CharacterText}"/>
+                            <TextBlock Text="{Binding formCreate}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Text="Вид упаковки:"  
+                                      Style="{StaticResource CharacterText}"/>
+                            <TextBlock Text="{Binding typePac}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Text="Условия хранения:"  
+                                      Style="{StaticResource CharacterText}"/>
+                            <TextBlock Text="{Binding storageСonditions}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Text="Действующее вещество:"  
+                                      Style="{StaticResource CharacterText}"/>
+                            <TextBlock Text="{Binding activeSubst}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Text="Дозировка:"  
+                                      Style="{StaticResource CharacterText}"/>
+                            <TextBlock Text="{Binding dosage}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Text="Срок годности:"  
+                                      Style="{StaticResource CharacterText}"/>
+                            <TextBlock Text="{Binding ExtDate, StringFormat={}{0} месяцев}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Text="Страна:"  
+                                      Style="{StaticResource CharacterText}"/>
+                            <TextBlock Text="{Binding country}"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                            <TextBlock Style="{StaticResource CharacterText}" 
+                                      Text="Количество на складе (шт):"/>
+                            <TextBlock Text="{Binding ProdQuantity}" 
+                                      FontWeight="Bold"
+                                      Foreground="#28A745"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,12" 
+Visibility="{Binding RequiresPrescription, Converter={StaticResource BooleanPrescriptionConverter}}">
+                            <Border Background="#FF6B8E23" CornerRadius="4" Padding="8,4">
+                                <TextBlock Text="РЕЦЕПТУРНЫЙ ПРЕПАРАТ" 
+       FontSize="14" FontWeight="Bold" 
+       Foreground="White"/>
+                            </Border>
+                            <TextBlock Text="Для покупки требуется рецепт врача" 
+   FontSize="12" Foreground="#6C757D" 
+   VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                        
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
+    

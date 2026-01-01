@@ -1,0 +1,187 @@
+﻿<UserControl x:Class="AptekaInternetApp.View.ManagerFile.UserControls.SalesReportControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AptekaInternetApp.View.ManagerFile.UserControls"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+
+    <UserControl.Resources>
+        <Style x:Key="ModernHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+
+        <Style x:Key="SectionHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#34495E"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="#5D6D7E"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3498DB"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="6"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#2980B9"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#21618C"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SuccessButtonStyle" TargetType="Button" BasedOn="{StaticResource PrimaryButtonStyle}">
+            <Setter Property="Background" Value="#27AE60"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#229954"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#1E8449"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="InfoCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#EAECEE"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="10" Opacity="0.1" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#F8F9FA" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <Border Grid.Row="0" Background="White" CornerRadius="8" Padding="20" Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="📊 Аналитика продаж" Style="{StaticResource ModernHeaderStyle}"/>
+                <TextBlock Text=" - Панель бизнес-отчетов" FontSize="16" Foreground="#7F8C8D" 
+                          VerticalAlignment="Center" Margin="15,0,0,0" FontFamily="Segoe UI"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Панель фильтров и выбора отчета -->
+        <Border Grid.Row="1" Style="{StaticResource InfoCardStyle}" Margin="0,0,0,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Левая колонка - Выбор периода -->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="📅 Период анализа" Style="{StaticResource SectionHeaderStyle}"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <ComboBox x:Name="PeriodTypeComboBox" Width="120" Margin="0,0,10,0"
+                                 SelectionChanged="PeriodTypeComboBox_SelectionChanged">
+                            <ComboBoxItem Content="Произвольный" IsSelected="True"/>
+                            <ComboBoxItem Content="Сегодня"/>
+                            <ComboBoxItem Content="Вчера"/>
+                            <ComboBoxItem Content="Текущая неделя"/>
+                            <ComboBoxItem Content="Текущий месяц"/>
+                        </ComboBox>
+
+                        <DatePicker x:Name="StartDatePicker" Width="130" Margin="0,0,10,0"/>
+                        <TextBlock Text="по" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <DatePicker x:Name="EndDatePicker" Width="130" Margin="0,0,10,0"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Правая колонка - Выбор отчета и действий -->
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="📈 Тип отчета" Style="{StaticResource SectionHeaderStyle}"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox x:Name="ReportTypeComboBox" Width="300" Margin="0,0,15,0">
+                            <ComboBoxItem Content="💰 Ежедневная выручка и ключевые показатели"/>
+                            <ComboBoxItem Content="🏆 Топ продаж по количеству"/>
+                            <ComboBoxItem Content="📦 Анализ продаж по категориям"/>
+                        </ComboBox>
+
+                        <Button x:Name="GenerateReportBtn" Content="🔄 Сформировать отчет" 
+                               Style="{StaticResource PrimaryButtonStyle}" 
+                               Click="GenerateReportBtn_Click"/>
+
+                        <Button x:Name="ExportExcelBtn" Content="📊 Excel" 
+                               Style="{StaticResource SuccessButtonStyle}" 
+                               Click="ExportExcelBtn_Click" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Основная область отчета -->
+        <Border Grid.Row="2" Style="{StaticResource InfoCardStyle}" Margin="0,0,0,15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Заголовок отчета -->
+                <TextBlock x:Name="ReportTitle" Grid.Row="0" Text="Выберите тип отчета и период" 
+                          Style="{StaticResource SectionHeaderStyle}" Margin="0,0,0,15"/>
+
+                <!-- Контент отчета -->
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                    <!-- Таблица данных -->
+                    <DataGrid x:Name="ReportDataGrid" AutoGenerateColumns="True"
+                             CanUserAddRows="False" IsReadOnly="True"
+                             HeadersVisibility="Column" GridLinesVisibility="Horizontal"
+                             FontSize="13" HorizontalGridLinesBrush="#EAECEE"/>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+
+       
+    </Grid>
+</UserControl>

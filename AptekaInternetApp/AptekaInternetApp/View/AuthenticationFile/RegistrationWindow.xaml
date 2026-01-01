@@ -1,0 +1,65 @@
+﻿<Window x:Class="AptekaInternetApp.View.LoginAndRegWindows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AptekaInternetApp.View.LoginAndRegWindows"
+        mc:Ignorable="d"
+        Title="AptekaHub. Регистрация" MinHeight="700" Width="600" WindowStartupLocation="CenterScreen"
+        Icon="/Resources/Images/Icons/iconProgram.ico">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#30a8ff"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style >
+
+        
+
+    </Window.Resources>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <TextBlock FontSize="35" FontWeight="Bold">Регистрация</TextBlock>
+
+        <TextBlock Margin="0 20 0 5" HorizontalAlignment="Left" Foreground="Black" FontSize="20" FontWeight="Medium">ФИО: (не обязательно)</TextBlock>
+        <Border  BorderBrush="#30a8ff" Width="370" Height="50" BorderThickness="3" CornerRadius="10" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  HorizontalAlignment="Center">
+                <TextBox x:Name="FIOTextBox" Style="{StaticResource NoBlueBorderTextBox}" Width="360"  FontSize="25" BorderBrush="Transparent" ></TextBox>
+            </StackPanel>
+        </Border>
+        <TextBlock Margin="0 10 0 5" HorizontalAlignment="Left" Foreground="Black" FontSize="20" FontWeight="Medium">Логин: (обязательно)</TextBlock>
+        <Border  BorderBrush="#30a8ff" Width="370" Height="50" BorderThickness="3" CornerRadius="10" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  HorizontalAlignment="Center">
+                <TextBox x:Name="LoginTextBox" Style="{StaticResource NoBlueBorderTextBox}" Width="360"  FontSize="25" BorderBrush="Transparent" ></TextBox>
+            </StackPanel>
+        </Border>
+        <TextBlock Margin="0 10 0 5" HorizontalAlignment="Left" Foreground="Black" FontSize="20" FontWeight="Medium">Почта: (обязательно)</TextBlock>
+        <Border  BorderBrush="#30a8ff" Width="370" Height="50" BorderThickness="3" CornerRadius="10" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  HorizontalAlignment="Center">
+                <TextBox x:Name="EmailTextBox" Style="{StaticResource NoBlueBorderTextBox}" Width="360"  FontSize="25" BorderBrush="Transparent" ></TextBox>
+            </StackPanel>
+        </Border>
+
+        <TextBlock Margin="0 10 0 5" HorizontalAlignment="Left" Foreground="Black" FontSize="20" FontWeight="Medium">Пароль: (обязательно)</TextBlock>
+        <Border  BorderBrush="#30a8ff" Width="370" Height="50" BorderThickness="3" CornerRadius="10" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  HorizontalAlignment="Center">
+                <PasswordBox x:Name="PasswordTextBox" Style="{StaticResource NoBlueBorderPasswordBox}" Width="360"  FontSize="25" BorderBrush="Transparent" />
+            </StackPanel>
+        </Border>
+
+        
+        <TextBlock Margin="0 10 0 5" HorizontalAlignment="Left" Foreground="Black" FontSize="20" FontWeight="Medium">Подтвержение пароля: (обязательно)</TextBlock>
+        <Border  BorderBrush="#30a8ff" Width="370" Height="50" BorderThickness="3" CornerRadius="10" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  HorizontalAlignment="Center">
+                <PasswordBox Name="RepeatPassword" Style="{StaticResource NoBlueBorderPasswordBox}" Width="360"  FontSize="25" BorderBrush="Transparent" ></PasswordBox>
+            </StackPanel>
+        </Border>
+        <StackPanel x:Name="RoleStackPanel">
+            <TextBlock Margin="0 10 0 5" HorizontalAlignment="Left" Foreground="Black" FontSize="20" FontWeight="Medium">Роль: (обязательно)</TextBlock>
+            <ComboBox Width="370" Height="50" FontSize="30" Name="RoleComboBox"></ComboBox>
+        </StackPanel>
+       
+        <Button FontSize="16" Margin="0 10 0 0" Style="{StaticResource TextButtonStyle}" Name="BackButton" Click="BackButton_Click">
+            <TextBlock TextDecorations="Underline" Foreground="Black">Я уже авторизован</TextBlock>
+        </Button>
+        <Button Margin="0 10 0 30" Width="330" Height="55"  x:Name="RegistrationButton" Template="{StaticResource MainButtons}" Background="#30a8ff"  Style="{StaticResource ButtonStyle}" Content="Зарегистрироваться" Click="RegistrationButton_Click"></Button>
+    </StackPanel>
+</Window>

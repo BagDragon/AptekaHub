@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="AptekaInternetApp.View.MainWindowFile.UsersControls.CatalogSubcategoriesUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AptekaInternetApp.View.MainWindowFile.UsersControls"
+             mc:Ignorable="d" 
+                     d:DesignHeight="50" d:DesignWidth="1000">
+    <StackPanel Background="White" Orientation="Horizontal" HorizontalAlignment="Center">
+        <ItemsControl x:Name="ItemsControlSubcategories" Height="30" VerticalAlignment="Top" 
+                      Width="850" HorizontalAlignment="Center">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Click="SubcategoryButton_Click" Tag="{Binding}"
+                            Style="{StaticResource SubcategoryButtonStyle}"
+                            Margin="0,0,10,0">
+                        <Border HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Viewbox Width="18" Height="18" Margin="0,0,8,0">
+                                    <Path Data="{Binding ImageSubcategory, FallbackValue='M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2Z'}" 
+                                      Fill="#666" 
+                                      Stretch="Uniform"/>
+                                </Viewbox>
+                                <TextBlock FontSize="15" Text="{Binding Name}" Foreground="Gray" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </StackPanel>
+</UserControl>

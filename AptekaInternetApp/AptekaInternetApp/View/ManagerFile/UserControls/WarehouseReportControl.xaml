@@ -1,0 +1,241 @@
+﻿<UserControl x:Class="AptekaInternetApp.View.ManagerFile.UserControls.WarehouseReportControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AptekaInternetApp.View.ManagerFile.UserControls"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+
+    <UserControl.Resources>
+        <Style x:Key="ModernHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+
+        <Style x:Key="SectionHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#34495E"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="#5D6D7E"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3498DB"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="6"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#2980B9"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#21618C"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SuccessButtonStyle" TargetType="Button" BasedOn="{StaticResource PrimaryButtonStyle}">
+            <Setter Property="Background" Value="#27AE60"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#229954"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#1E8449"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="WarningButtonStyle" TargetType="Button" BasedOn="{StaticResource PrimaryButtonStyle}">
+            <Setter Property="Background" Value="#E67E22"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#D35400"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#BA4A00"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="InfoCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#EAECEE"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="10" Opacity="0.1" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стили для статусов запасов -->
+        <Style x:Key="CriticalStatusStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#E74C3C"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style x:Key="LowStatusStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#E67E22"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style x:Key="NormalStatusStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#27AE60"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style x:Key="ExcessStatusStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#3498DB"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#F8F9FA" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <Border Grid.Row="0" Background="White" CornerRadius="8" Padding="20" Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="📦 Управление складом" Style="{StaticResource ModernHeaderStyle}"/>
+                <TextBlock Text=" - Анализ товарных запасов" FontSize="16" Foreground="#7F8C8D" 
+                          VerticalAlignment="Center" Margin="15,0,0,0" FontFamily="Segoe UI"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Панель выбора отчета и действий -->
+        <Border Grid.Row="1" Style="{StaticResource InfoCardStyle}" Margin="0,0,0,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Левая колонка - Выбор типа отчета -->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="📊 Тип складского отчета" Style="{StaticResource SectionHeaderStyle}"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox x:Name="ReportTypeComboBox" Width="300" Margin="0,0,15,0">
+                            <ComboBoxItem Content="🔴 Товары с низким запасом"/>
+                            <ComboBoxItem Content="🔵 Товары с избыточным запасом"/>
+                            <ComboBoxItem Content="📊 Полный отчет по складу"/>
+                        </ComboBox>
+
+                        <Button x:Name="GenerateReportBtn" Content="🔄 Сформировать отчет" 
+                               Style="{StaticResource PrimaryButtonStyle}" 
+                               Click="GenerateReportBtn_Click"/>
+
+                        <Button x:Name="ExportExcelBtn" Content="📊 Экспорт в Excel" 
+                               Style="{StaticResource SuccessButtonStyle}" 
+                               Click="ExportExcelBtn_Click" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Правая колонка - Быстрые действия -->              
+            </Grid>
+        </Border>
+
+        <!-- Основная область отчета -->
+        <Border Grid.Row="2" Style="{StaticResource InfoCardStyle}" Margin="0,0,0,15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Заголовок и статистика -->
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,15">
+                    <TextBlock x:Name="ReportTitle" Text="Выберите тип складского отчета" 
+                              Style="{StaticResource SectionHeaderStyle}" VerticalAlignment="Center"/>
+
+                    <!-- Статистика -->
+                    <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                        <Border Background="#E8F6F3" CornerRadius="4" Padding="8,4" Margin="0,0,10,0">
+                            <TextBlock x:Name="TotalCountText" Text="Всего: 0" Style="{StaticResource NormalStatusStyle}"/>
+                        </Border>
+                        <Border Background="#FDEDEC" CornerRadius="4" Padding="8,4" Margin="0,0,10,0">
+                            <TextBlock x:Name="CriticalCountText" Text="Критично: 0" Style="{StaticResource CriticalStatusStyle}"/>
+                        </Border>
+                        <Border Background="#FEF9E7" CornerRadius="4" Padding="8,4" Margin="0,0,10,0">
+                            <TextBlock x:Name="LowCountText" Text="Низкий: 0" Style="{StaticResource LowStatusStyle}"/>
+                        </Border>
+                        <Border Background="#EBF5FB" CornerRadius="4" Padding="8,4">
+                            <TextBlock x:Name="ExcessCountText" Text="Избыток: 0" Style="{StaticResource ExcessStatusStyle}"/>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Контент отчета -->
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                    <!-- Таблица данных -->
+                    <DataGrid x:Name="ReportDataGrid" AutoGenerateColumns="True"
+                             CanUserAddRows="False" IsReadOnly="True"
+                             HeadersVisibility="Column" GridLinesVisibility="Horizontal"
+                             FontSize="13" HorizontalGridLinesBrush="#EAECEE"
+                             RowHeight="35">
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Padding" Value="12,8"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="DataGridCell">
+                                            <Border Background="{TemplateBinding Background}" 
+                                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                                    Padding="{TemplateBinding Padding}">
+                                                <ContentPresenter VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGrid.CellStyle>
+                    </DataGrid>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
